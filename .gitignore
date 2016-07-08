@@ -1,0 +1,14 @@
+public/css/
+public/img/
+public/font/
+public/js/
+public/json/
+
+vendor/
+
+node_modules/
+npm_debug-log
+
+bower_components/
+
+.gitkeep

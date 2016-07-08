@@ -1,0 +1,36 @@
+{
+  "devDependencies": {
+    "bower-webpack-plugin": "*",
+    "browser-sync": "*",
+    "coffee-loader": "*",
+    "coffee-script": "*",
+    "css-loader": "*",
+    "file-loader": "*",
+    "gulp": "*",
+    "gulp-coffee": "*",
+    "gulp-concat": "*",
+    "gulp-csscomb": "*",
+    "gulp-cssnano": "*",
+    "gulp-imagemin": "*",
+    "gulp-load-plugins": "*",
+    "gulp-pleeease": "*",
+    "gulp-plumber": "*",
+    "gulp-stylus": "*",
+    "gulp-uglify": "*",
+    "gulp-watch": "*",
+    "gulp-webpack": "*",
+    "img-loader": "*",
+    "nib": "*",
+    "raw-loader": "*",
+    "run-sequence": "*",
+    "rupture": "*",
+    "style-loader": "*",
+    "stylus": "*",
+    "vinyl-named-with-path": "*",
+    "webpack": "*"
+  },
+  "scripts": {
+    "gulp": "node ./node_modules/gulp/bin/gulp.js"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,14 @@
+{
+  "name": "yuki.nit2a.com",
+  "moduleType": [
+    "coffee"
+  ],
+  "private": true,
+  "dependencies": {
+    "jquery": "*",
+    "html5shiv": "*",
+    "css3-mediaqueries-js": "*",
+    "respond": "*",
+    "matchMedia": "*"
+  }
+}
