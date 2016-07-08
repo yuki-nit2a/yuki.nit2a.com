@@ -1,0 +1,32 @@
+{
+    "name": "yuki-nit2a/yuki.nit2a.com",
+    "type": "project",
+    "description": "",
+    "license": "",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "yuki-nit2a",
+            "role": "Developer"
+        }
+    ],
+    "platform": {
+        "php": "~7.0.0"
+    },
+    "require": {
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*",
+        "phpmd/phpmd": "*",
+        "sebastian/phpcpd": "*",
+        "squizlabs/php_codesniffer": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Nit2a\\Yuki\\": "src/app/src/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true
+    }
+}
