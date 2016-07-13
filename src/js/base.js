@@ -1,4 +1,4 @@
-import Graphic from './graphic.js'
+import Graphic from './graphic/graphic.js'
 
 class Base
 {

@@ -47,18 +47,11 @@ module.exports =
       'p5'            : 'p5'
 
     new webpack.BannerPlugin(
-      'Hello! Sir?'
+      'Hello. I recommend you view on github for readability.'
     ,
       raw: false
       entryOnly: false
     )
-
-    new webpack.optimize.CommonsChunkPlugin
-      name: 'base'
-      chunks: [
-        'base'
-        'graphic'
-      ]
 
     new webpack.optimize.OccurenceOrderPlugin()
     new webpack.optimize.DedupePlugin()

@@ -48,11 +48,4 @@ module.exports =
 
     #new webpack.SourceMapDevToolPlugin
     #  filename: '[name].js.map'
-
-    new webpack.optimize.CommonsChunkPlugin
-      name: 'base'
-      chunks: [
-        'base'
-        'graphic'
-      ]
   ]
