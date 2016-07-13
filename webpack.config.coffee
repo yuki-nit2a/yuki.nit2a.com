@@ -6,7 +6,8 @@ module.exports =
     filename: '[name].js'
 
   resolve:
-    root: [
+    modulesDirectories: [
+      'node_modules/'
       'bower_components/'
     ]
     extensions: [
@@ -18,20 +19,20 @@ module.exports =
   module:
     loaders: [
       {
-        test: /\.coffee$/
-        loader: 'coffee'
+        test   : /\.coffee$/
+        loader : 'coffee'
       }
       {
-        test: /\.js$/
-        loader: 'babel'
+        test   : /\.js$/
+        loader : 'babel'
       }
       {
-        test: /\.css$/
-        loader: 'style!css'
+        test   : /\.css$/
+        loader : 'style!css'
       }
       {
-        test: /\.(png|svg|gif|jpg)$/
-        loader: 'raw!img'
+        test   : /\.(png|svg|gif|jpg)$/
+        loader : 'raw!img'
       }
     ]
 
@@ -39,30 +40,27 @@ module.exports =
     new BowerWebpackPlugin()
 
     new webpack.ProvidePlugin
-      $: 'jquery'
-      jQuery: 'jquery'
-      'window.jQuery': 'jquery'
-      'root.jQuery': 'jquery'
+      $               : 'jquery'
+      jQuery          : 'jquery'
+      'window.jQuery' : 'jquery'
+      'root.jQuery'   : 'jquery'
+      'p5'            : 'p5'
 
     new webpack.BannerPlugin(
-      ''
+      'Hello! Sir?'
     ,
       raw: false
       entryOnly: false
     )
 
-    #new webpack.SourceMapDevToolPlugin
-    #  filename: '[name].js.map'
+    new webpack.SourceMapDevToolPlugin
+      filename: '[name].js.map'
 
-    new webpack.optimize.CommonsChunkPlugin
-      name: 'common'
-      chunks: [
-        'page'
-      ]
     new webpack.optimize.CommonsChunkPlugin
       name: 'base'
       chunks: [
-        'common'
+        'base'
+        'graphic'
       ]
 
     new webpack.optimize.OccurenceOrderPlugin()

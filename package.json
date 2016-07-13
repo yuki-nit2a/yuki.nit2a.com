@@ -1,4 +1,7 @@
 {
+  "dependencies": {
+    "p5": "*"
+  },
   "devDependencies": {
     "bower-webpack-plugin": "*",
     "browser-sync": "*",
@@ -36,6 +39,5 @@
   },
   "scripts": {
     "gulp": "node ./node_modules/gulp/bin/gulp.js"
-  },
-  "dependencies": {}
+  }
 }
