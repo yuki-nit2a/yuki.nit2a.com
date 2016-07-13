@@ -21,6 +21,13 @@ g.task 'js', ->
     .pipe gp.webpack require './webpack.config.coffee'
     .pipe g.dest('public/js/')
 
+g.task 'js-prod', ->
+  g.src 'src/js/**'
+    .pipe gp.plumber()
+    .pipe named()
+    .pipe gp.webpack require './webpack.config.prod.coffee'
+    .pipe g.dest('public/js/')
+
 g.task 'json', ->
   g.src 'src/json/**'
     .pipe gp.plumber()
