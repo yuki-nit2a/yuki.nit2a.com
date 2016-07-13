@@ -5,6 +5,7 @@ public/js/
 public/json/
 
 vendor/
+composer.lock
 
 node_modules/
 npm-debug.log
