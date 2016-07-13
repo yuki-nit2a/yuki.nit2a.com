@@ -46,8 +46,12 @@ module.exports =
       'root.jQuery'   : 'jquery'
       'p5'            : 'p5'
 
-    #new webpack.SourceMapDevToolPlugin
-    #  filename: '[name].js.map'
+    new webpack.BannerPlugin(
+      'Hello! Sir?'
+    ,
+      raw: false
+      entryOnly: false
+    )
 
     new webpack.optimize.CommonsChunkPlugin
       name: 'base'
@@ -55,4 +59,11 @@ module.exports =
         'base'
         'graphic'
       ]
+
+    new webpack.optimize.OccurenceOrderPlugin()
+    new webpack.optimize.DedupePlugin()
+    new webpack.optimize.UglifyJsPlugin
+      compress:
+        warnings: false
+    new webpack.optimize.AggressiveMergingPlugin()
   ]
