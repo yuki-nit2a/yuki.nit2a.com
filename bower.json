@@ -5,6 +5,7 @@
   ],
   "private": true,
   "dependencies": {
+    "p5js": "*",
     "jquery": "*",
     "html5shiv": "*",
     "css3-mediaqueries-js": "*",

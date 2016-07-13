@@ -61,12 +61,12 @@ g.task 'css', ->
 g.task 'img', ->
   g.src 'src/img/**'
     .pipe gp.plumber()
-    .pipe gp.imagemin(
-      optimizationLevel: 7
-      progressive: true
-      interlaced: true
-      multipass: true
-    )
+    #.pipe gp.imagemin(
+    #  optimizationLevel: 7
+    #  progressive: true
+    #  interlaced: true
+    #  multipass: true
+    #)
     .pipe g.dest('public/img/')
 
 g.task 'font', ->

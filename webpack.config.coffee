@@ -22,6 +22,10 @@ module.exports =
         loader: 'coffee'
       }
       {
+        test: /\.js$/
+        loader: 'babel'
+      }
+      {
         test: /\.css$/
         loader: 'style!css'
       }
