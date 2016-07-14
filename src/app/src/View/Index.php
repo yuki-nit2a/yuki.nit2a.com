@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="/css/base.css">
 
         <!--[if lt IE 9]>
-        <script src="/js/polyfill/ie.js"></script>
+        <script src="/js/ie.js"></script>
         <![endif]-->
     </head>
 

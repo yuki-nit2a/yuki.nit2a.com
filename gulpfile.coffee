@@ -15,7 +15,7 @@ g.task 'reload', ->
   return
 
 taskJs = (webpackConfigPath) ->
-  g.src 'src/js/**'
+  g.src 'src/js/*.js'
     .pipe gp.plumber()
     .pipe named()
     .pipe gp.eslint()
@@ -88,7 +88,7 @@ g.task 'default', ['init', 'compile'], ->
   g.watch 'src/app/**', ->
     runSequence 'reload'
 
-  g.watch ['src/js/**'] ->
+  g.watch 'src/js/**', ->
     runSequence 'js-dev', 'reload'
 
   g.watch 'src/json/**', ->
