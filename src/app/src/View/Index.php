@@ -26,7 +26,7 @@
             </header>
 
             <main>
-                <h1>Profile</h1>
+                <h1>profile</h1>
 
                 <dl>
                     <dt>Alias</dt>
