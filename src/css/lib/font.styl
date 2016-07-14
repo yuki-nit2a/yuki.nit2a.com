@@ -1,0 +1,11 @@
+font-face(family, dir, file)
+    @font-face
+        src url(dir + file + '.eot')
+        src url(dir + file + '.eot?#iefix')   format('embedded-opentype'),
+            url(dir + file + '.woff')         format('woff'),
+            url(dir + file + '.ttf')          format('truetype'),
+            url(dir + file + '.svg#'+ family) format('svg')
+
+        font-family family
+        font-weight normal
+        font-style normal

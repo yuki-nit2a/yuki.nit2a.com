@@ -1,3 +1,5 @@
+@import 'lib/font.styl'
+
 global-reset()
 reset-html5()
 
@@ -9,17 +11,19 @@ reset-html5()
     width device-width
     initial-scale 1
 
+font-face('PragatiNarrow', '/font/', 'PragatiNarrow-Regular')
+
 html
     font-size 10px
-
-    +below(767px)
-        font-size 11px
+    font-family 'PragatiNarrow', '-apple-system', 'Helvetica Neue', 'Hiragino Kaku Gothic ProN', 'Yu Gothic Medium', 'Meiryo', 'sans-serif'
+    background-color #ececec
 
 body
     &::-webkit-scrollbar
         display none
 
     > #board
+        z-index 2
         absolute top 50% left 50%
         width 260px
         height 400px
@@ -31,36 +35,65 @@ body
 
             > h1
                 height 25px
-                font-size 2.5rem
+                line-height 25px
+                font-size 2.8rem
                 font-weight bold
-                color #494949
+                color #000000
+                text-shadow 0 2px 0 #ffffff
+                animation animate-box 1000ms ease 500ms infinite normal
+
+                @keyframes animate-box
+                    5%
+                        transform rotateZ(0deg) translate(0, 0)
+                    25%
+                        transform rotateZ(5deg) translate(0, 3px)
+                    45%
+                        transform rotateZ(0deg) translate(0, 0)
+                    55%
+                        transform rotateZ(0deg) translate(0, 0)
+                    75%
+                        transform rotateZ(-5deg) translate(0, 3px)
+                    95%
+                        transform rotateZ(0deg) translate(0, 0)
 
         > main
 
             > h1
-                height 15px
-                font-size 1.6rem
-                color #919191
+                height 20px
+                line-height 20px
+                font-size 1.3rem
+                color #404040
 
             > dl
                 margin 15px 0
                 padding 15px 0
                 height 340px
+                background-color rgba(250, 250, 250, 0.8)
+
                 border 1px dashed #202020
                 border-radius 50%
-                background-color rgba(250, 250, 250, 0.6)
 
                 > dt
                     margin 10px 0 5px
                     font-size 1.5rem
                     font-weight bold
                     color #505050
+
                 > dd
                     margin 2px 70px
                     font-size 1.3rem
                     color #696969
 
+                a
+                    text-decoration underline
+                    color #202020
+
+                    &:hover
+                        color #707070
+                    &:active
+                        text-decoration none
+
     #background
         z-index 1
-        margin-top -400px
         absolute top 0 right 0 bottom 0 left 0
+        cursor move
