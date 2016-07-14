@@ -12,3 +12,55 @@ reset-html5()
 html
     font-size 10px
 
+    +below(767px)
+        font-size 11px
+
+body
+    &::-webkit-scrollbar
+        display none
+
+    > #board
+        absolute top 50% left 50%
+        width 260px
+        height 400px
+        margin-left -(@width / 2)
+        margin-top -(@height / 2)
+        text-align center
+
+        > header
+
+            > h1
+                height 25px
+                font-size 2.5rem
+                font-weight bold
+                color #494949
+
+        > main
+
+            > h1
+                height 15px
+                font-size 1.6rem
+                color #919191
+
+            > dl
+                margin 15px 0
+                padding 15px 0
+                height 340px
+                border 1px dashed #202020
+                border-radius 50%
+                background-color rgba(250, 250, 250, 0.6)
+
+                > dt
+                    margin 10px 0 5px
+                    font-size 1.5rem
+                    font-weight bold
+                    color #505050
+                > dd
+                    margin 2px 70px
+                    font-size 1.3rem
+                    color #696969
+
+    #background
+        z-index 1
+        margin-top -400px
+        absolute top 0 right 0 bottom 0 left 0
