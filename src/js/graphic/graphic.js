@@ -1,6 +1,8 @@
+import p5 from 'p5'
 import Background from './background/background.js'
 
-export default class Graphic {
+export default class Graphic
+{
   draw()
   {
     this.canvas = new p5(this.getSketch(), document.body)
@@ -21,10 +23,11 @@ export default class Graphic {
   getSetup(p)
   {
     return () => {
-      p.createCanvas($(window).width(), $(window).height(), p.WEBGL)
-      p.frameRate(60)
+      const canvas = p.createCanvas($(window).width(), $(window).height(), p.WEBGL)
+      canvas.parent('background')
 
-      p.background('#ececec');
+      p.frameRate(60)
+      p.background('#ececec')
     }
   }
 
