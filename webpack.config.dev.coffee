@@ -44,7 +44,6 @@ module.exports =
       jQuery          : 'jquery'
       'window.jQuery' : 'jquery'
       'root.jQuery'   : 'jquery'
-      'p5'            : 'p5'
 
     #new webpack.SourceMapDevToolPlugin
     #  filename: '[name].js.map'
