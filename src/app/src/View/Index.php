@@ -34,7 +34,7 @@
 
                     <dt>Position</dt>
                     <dd>Full stack engineer</dd>
-                    <dd>of web development.</dd>
+                    <dd>Web Developer</dd>
 
                     <dt>Interest</dt>
                     <dd>Philosophy</dd>
@@ -47,7 +47,6 @@
 
                     <dt>Board</dt>
                     <dd>I'm between jobs</dd>
-                    <dd>to make some www.</dd>
                 </dl>
             </main>
         </div>
