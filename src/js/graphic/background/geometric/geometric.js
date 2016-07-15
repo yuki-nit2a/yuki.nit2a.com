@@ -12,16 +12,18 @@ export default class Geometric
 
     const radianX2 = p.PI * 2
 
-    let radius             = p.width * 1
     let xMax               = 17
     let yMax               = 17
+    let geometricSizeMulti = 1
+    let radius             = p.width * 1
     let rotateX            = p.frameCount * -0.0005 + 1000
     let rotateY            = p.frameCount * 0.0010
     let rotateZ            = p.frameCount * 0.0010
-    let geometricSizeMulti = 1
     
     if (window.screen.width < 600) {
       radius             *= 2
+      xMax               = 10
+      yMax               = 10
       geometricSizeMulti = 0.5
       rotateX            *= 3
       rotateY            *= 3
