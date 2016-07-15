@@ -46,7 +46,7 @@
                     <dd><a href="https://github.com/yuki-nit2a" target="_blank">GitHub</a></dd>
 
                     <dt>Board</dt>
-                    <dd>I'm between jobs</dd>
+                    <dd>Ayy My HP!</dd>
                 </dl>
             </main>
         </div>
