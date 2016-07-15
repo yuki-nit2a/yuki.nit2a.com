@@ -15,7 +15,7 @@ export default class Background
   {
     const hexColorMax          = 255
     const radianX2             = p.PI * 2
-    const fps                  = 60
+    const fps                  = 30
     const fpsGear              = 1 / 20
 
     const radianPerFrame       = radianX2 / fps

@@ -23,12 +23,12 @@ export default class Graphic
     return () => {
       const width  = Graphic.getWidth(p)
       const height = Graphic.getHeight(p)
-      const fps    = 60
+      const fps    = 30
 
       const c = p.createCanvas(width, height, p.WEBGL)
       c.parent('background')
 
-      p.perspective(fps / 180 * p.PI, width / height, 0.1, 100)
+      p.perspective(fps / 60 * p.PI, width / height, 0.1, 100)
 
       p.frameRate(fps)
       p.background('#ececec')
