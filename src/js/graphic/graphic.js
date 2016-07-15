@@ -3,38 +3,73 @@ import Background from './background/background.js'
 
 export default class Graphic
 {
-  draw()
+  static draw()
   {
-    this.canvas = new p5(this.getSketch(), document.body)
+    const c = new p5(Graphic.getSketch(), document.body)
 
-    $(window).on('resize', () => {
-      this.canvas.resizeCanvas($(window).width(), $(window).height())
-    })
+    Graphic.listenEvent(c)
   }
 
-  getSketch()
+  static getSketch()
   {
     return (p) => {
-      p.setup = this.getSetup(p)
-      p.draw = this.getDraw(p)
+      p.setup = Graphic.getSetup(p)
+      p.draw = Graphic.getDraw(p)
     }
   }
 
-  getSetup(p)
+  static getSetup(p)
   {
     return () => {
-      const canvas = p.createCanvas($(window).width(), $(window).height(), p.WEBGL)
-      canvas.parent('background')
+      const width  = Graphic.getWidth(p)
+      const height = Graphic.getHeight(p)
+      const fps    = 60
 
-      p.frameRate(60)
+      const c = p.createCanvas(width, height, p.WEBGL)
+      c.parent('background')
+
+      p.perspective(fps / 180 * p.PI, width / height, 0.1, 100)
+
+      p.frameRate(fps)
       p.background('#ececec')
     }
   }
 
-  getDraw(p)
+  static getWidth(p)
+  {
+    return p.windowWidth * 0.90
+  }
+
+  static getHeight(p)
+  {
+    let   height    = p.windowHeight * 1.00
+    const heightMin = 500
+
+    if (height < heightMin) {
+      height = heightMin
+    }
+
+    return height
+  }
+
+  static getDraw(p)
   {
     return () => {
       Background.draw(p)
     }
+  }
+
+  static listenEvent(canvas)
+  {
+    window.onresize = () => Graphic.resizeCanvas(canvas)
+  }
+
+  static resizeCanvas(c)
+  {
+    const width  = Graphic.getWidth(c)
+    const height = Graphic.getHeight(c)
+    console.log(height)
+
+    c.resizeCanvas(width, height)
   }
 }

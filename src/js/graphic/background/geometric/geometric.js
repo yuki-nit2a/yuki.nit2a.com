@@ -10,7 +10,7 @@ export default class Geometric
   {
     p.normalMaterial()
 
-    const radianX2 = Math.PI * 2
+    const radianX2 = p.PI * 2
     const radius   = p.width * 1
     const xMax     = 17
     const yMax     = 17
@@ -64,7 +64,7 @@ export default class Geometric
     } else if (type === 5) {
       p.sphere(8)
     } else if (type === 6) {
-      p.ellipsoid(8, 16, 32)
+      p.ellipsoid(8, 16, 2)
     }
   }
 

@@ -14,7 +14,7 @@ export default class Background
   static changeColor(p)
   {
     const hexColorMax          = 255
-    const radianX2             = Math.PI * 2
+    const radianX2             = p.PI * 2
     const fps                  = 60
     const fpsGear              = 1 / 20
 
@@ -34,17 +34,16 @@ export default class Background
   {
     const xTranslate = p.frameCount * 0.01
     const yTranslate = 0
-    const zTranslate = -500
+    const zTranslate = -(p.windowHeight / 2)
 
     p.translate(xTranslate, yTranslate, zTranslate)
   }
 
   static translateCameraByMouse(p)
   {
-    const xTranslate = -p.mouseX / 30
-    const yTranslate = -p.mouseY / 30
-    const zTranslate = -500
+    const xTranslate = -p.mouseX / 10
+    const yTranslate = -p.mouseY / 10
 
-    p.translate(xTranslate, yTranslate, zTranslate)
+    p.translate(xTranslate, yTranslate)
   }
 }

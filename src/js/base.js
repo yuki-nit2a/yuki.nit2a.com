@@ -4,9 +4,8 @@ class Base
 {
   static init()
   {
-    const graphic = new Graphic()
-    graphic.draw()
+    Graphic.draw()
   }
 }
 
-$(document).ready(() => Base.init())
+window.onload = () => Base.init()
