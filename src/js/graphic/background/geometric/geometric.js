@@ -11,9 +11,22 @@ export default class Geometric
     p.normalMaterial()
 
     const radianX2 = p.PI * 2
-    const radius   = p.width * 1
-    const xMax     = 17
-    const yMax     = 17
+
+    let radius             = p.width * 1
+    let xMax               = 17
+    let yMax               = 17
+    let rotateX            = p.frameCount * -0.0005 + 1000
+    let rotateY            = p.frameCount * 0.0010
+    let rotateZ            = p.frameCount * 0.0010
+    let geometricSizeMulti = 1
+    
+    if (window.screen.width < 600) {
+      radius             *= 2
+      geometricSizeMulti = 0.5
+      rotateX            *= 3
+      rotateY            *= 3
+      rotateZ            *= 3
+    }
 
     for (let x = 0; x <= xMax; ++x) {
       p.push()
@@ -33,12 +46,12 @@ export default class Geometric
 
         p.push()
         p.translate(xTranslate, yTranslate, zTranslate)
-        Geometric.addGeometric(p, x)
+        Geometric.addGeometric(p, x, geometricSizeMulti)
         p.pop()
 
-        p.rotateX(p.frameCount * -0.0005 + 1000)
-        p.rotateY(p.frameCount * 0.0010)
-        p.rotateZ(p.frameCount * 0.0010)
+        p.rotateX(rotateX)
+        p.rotateY(rotateY)
+        p.rotateZ(rotateZ)
 
         Geometric.moveLightByMouse(p)
       }
@@ -47,24 +60,24 @@ export default class Geometric
     }
   }
 
-  static addGeometric(p, unique)
+  static addGeometric(p, unique, multi)
   {
     const type = unique % 6
 
     if (type === 0) {
-      p.plane(16)
+      p.plane(16 * multi)
     } else if (type === 1) {
-      p.box(8, 8, 8)
+      p.box(8 * multi, 8 * multi, 8 * multi)
     } else if (type === 2) {
-      p.cylinder(8, 16)
+      p.cylinder(8 * multi, 16 * multi)
     } else if (type === 3) {
-      p.cone(8, 16)
+      p.cone(8 * multi, 16 * multi)
     } else if (type === 4) {
-      p.torus(16, 4)
+      p.torus(16 * multi, 4 * multi)
     } else if (type === 5) {
-      p.sphere(8)
+      p.sphere(8 * multi)
     } else if (type === 6) {
-      p.ellipsoid(8, 16, 2)
+      p.ellipsoid(8 * multi, 16, 2)
     }
   }
 
