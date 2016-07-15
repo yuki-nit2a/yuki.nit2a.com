@@ -14,17 +14,19 @@ reset-html5()
 font-face('PragatiNarrow', '/font/', 'PragatiNarrow-Regular')
 
 html
+    height 100%
+    min-height 500px
     font-size 10px
     font-family 'PragatiNarrow', '-apple-system', 'Helvetica Neue', 'Hiragino Kaku Gothic ProN', 'Yu Gothic Medium', 'Meiryo', 'sans-serif'
     background-color #ececec
 
 body
-    &::-webkit-scrollbar
-        display none
+    relative
+    height 100%
 
     > #board
         z-index 2
-        absolute top 50% left 50%
+        relative top 50% left 50%
         width 260px
         height 400px
         margin-left -(@width / 2)
@@ -97,3 +99,6 @@ body
         z-index 1
         absolute top 0 right 0 bottom 0 left 0
         cursor move
+
+        > canvas
+            display block
