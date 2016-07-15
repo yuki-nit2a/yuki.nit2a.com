@@ -39,12 +39,6 @@ module.exports =
   plugins: [
     new BowerWebpackPlugin()
 
-    new webpack.ProvidePlugin
-      $               : 'jquery'
-      jQuery          : 'jquery'
-      'window.jQuery' : 'jquery'
-      'root.jQuery'   : 'jquery'
-
     #new webpack.SourceMapDevToolPlugin
     #  filename: '[name].js.map'
   ]
