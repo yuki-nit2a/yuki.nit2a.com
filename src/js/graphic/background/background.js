@@ -34,7 +34,11 @@ export default class Background
   {
     const xTranslate = p.frameCount * 0.01
     const yTranslate = 0
-    const zTranslate = -(p.windowHeight / 2)
+
+    let zTranslate = -(p.width / 3)
+    if (window.screen.width < 600) {
+      zTranslate = window.screen.width / 5
+    }
 
     p.translate(xTranslate, yTranslate, zTranslate)
   }
