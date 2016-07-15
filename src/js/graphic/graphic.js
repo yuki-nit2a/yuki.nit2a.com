@@ -28,7 +28,7 @@ export default class Graphic
       const c = p.createCanvas(width, height, p.WEBGL)
       c.parent('background')
 
-      p.perspective(fps / 60 * p.PI, width / height, 0.1, 100)
+      p.perspective(fps / 90 * p.PI, width / height, 0.1, 100)
 
       p.frameRate(fps)
       p.background('#ececec')
