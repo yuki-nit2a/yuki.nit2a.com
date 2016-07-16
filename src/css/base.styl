@@ -13,6 +13,26 @@ reset-html5()
 
 font-face('PragatiNarrow', '/font/', 'PragatiNarrow-Regular')
 
+@keyframes dance
+    5%
+        transform rotateZ(0deg) translate(0, 0)
+    25%
+        transform rotateZ(5deg) translate(2px, 3px)
+    45%
+        transform rotateZ(0deg) translate(0, 0)
+    55%
+        transform rotateZ(0deg) translate(0, 0)
+    75%
+        transform rotateZ(-5deg) translate(-2px, 3px)
+    95%
+        transform rotateZ(0deg) translate(0, 0)
+
+@keyframes turn
+    0%
+        transform rotateX(0deg)
+    100%
+        transform rotateX(720deg)
+
 html
     height 100%
     min-height 500px
@@ -42,21 +62,7 @@ body
                 font-weight bold
                 color #000000
                 text-shadow 0 2px 0 #ffffff
-                animation animate-box 1000ms ease 500ms infinite normal
-
-                @keyframes animate-box
-                    5%
-                        transform rotateZ(0deg) translate(0, 0)
-                    25%
-                        transform rotateZ(5deg) translate(0, 3px)
-                    45%
-                        transform rotateZ(0deg) translate(0, 0)
-                    55%
-                        transform rotateZ(0deg) translate(0, 0)
-                    75%
-                        transform rotateZ(-5deg) translate(0, 3px)
-                    95%
-                        transform rotateZ(0deg) translate(0, 0)
+                animation dance 1000ms ease 500ms infinite normal
 
         > main
 
@@ -81,10 +87,24 @@ body
                     font-weight bold
                     color #505050
 
+                    &:nth-child(1)
+                        animation turn 0.5s linear 1 7.0s normal
+                    &:nth-child(3)
+                        animation turn 0.5s linear 1 7.5s normal
+                    &:nth-child(6)
+                        animation turn 0.5s linear 1 8.0s normal
+                    &:nth-child(8)
+                        animation turn 0.5s linear 1 8.5s normal
+                    &:nth-child(10)
+                        animation turn 0.5s linear 1 9.0s normal
+                    &:nth-child(12)
+                        animation turn 0.5s linear 1 9.5s normal
+
                 > dd
                     margin 2px 70px
                     font-size 1.3rem
                     color #696969
+                    animation turn 0.7s linear 1 10s alternate
 
                 a
                     text-decoration underline
