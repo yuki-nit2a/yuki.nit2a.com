@@ -68,7 +68,6 @@ export default class Graphic
   {
     const width  = Graphic.getWidth(c)
     const height = Graphic.getHeight(c)
-    console.log(height)
 
     c.resizeCanvas(width, height)
   }
