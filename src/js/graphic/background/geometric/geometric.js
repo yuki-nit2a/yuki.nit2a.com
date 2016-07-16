@@ -8,10 +8,6 @@ export default class Geometric
 
   static generateGeometric(p)
   {
-    p.normalMaterial()
-
-    const radianX2 = p.PI * 2
-
     let xMax               = 17
     let yMax               = 17
     let geometricSizeMulti = 1
@@ -36,7 +32,7 @@ export default class Geometric
       for (let y = 0; y <= yMax; ++y) {
         const xMapped1   = x / xMax
         const yMapped1   = y / yMax
-        const xRadian    = xMapped1 * radianX2
+        const xRadian    = xMapped1 * p.TWO_PI
         const yRadian    = yMapped1
         const xSine      = p.sin(xRadian)
         const ySine      = p.sin(yRadian)

@@ -14,11 +14,10 @@ export default class Background
   static changeColor(p)
   {
     const hexColorMax          = 255
-    const radianX2             = p.PI * 2
     const fps                  = 30
     const fpsGear              = 1 / 20
 
-    const radianPerFrame       = radianX2 / fps
+    const radianPerFrame       = p.TWO_PI / fps
     const radianPerFrameGeared = radianPerFrame * fpsGear
     const fpsReal              = fps / fpsGear
     const frame                = p.frameCount % fpsReal
