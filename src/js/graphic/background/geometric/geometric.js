@@ -85,7 +85,7 @@ export default class Geometric
       const x = ((p.mouseX / p.width) - 0.5) * 2
 
       p.directionalLight(160, 160, 180, x, -y, 0.25)
-      p.specularMaterial(50)
+      p.specularMaterial(255, 255, 255, 235)
   }
 
   static translateByMouse(p)
