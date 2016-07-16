@@ -82,9 +82,10 @@ g.task 'font', ->
     .pipe gp.plumber()
     .pipe g.dest('public/font/')
 
-g.task 'compile', ['js-prod', 'json', 'css', 'img', 'font']
+g.task 'compile-dev', ['js-dev', 'json', 'css', 'img', 'font']
+g.task 'compile-prod', ['js-prod', 'json', 'css', 'img', 'font']
 
-g.task 'default', ['init', 'compile'], ->
+g.task 'default', ['init', 'compile-dev'], ->
   g.watch 'src/app/**', ->
     runSequence 'reload'
 
