@@ -7,6 +7,7 @@ export default class Background
     Background.changeColor(p)
     Background.translateCamera(p)
     Background.translateCameraByMouse(p)
+    Background.rotateCameraByMouse(p)
 
     Geometric.draw(p)
   }
@@ -48,5 +49,10 @@ export default class Background
     const yTranslate = -p.mouseY / 10
 
     p.translate(xTranslate, yTranslate)
+  }
+
+  static rotateCameraByMouse(p)
+  {
+    p.orbitControl()
   }
 }

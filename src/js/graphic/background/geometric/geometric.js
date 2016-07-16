@@ -2,7 +2,6 @@ export default class Geometric
 {
   static draw(p)
   {
-    Geometric.translateByMouse(p)
     Geometric.generateGeometric(p)
   }
 
@@ -86,10 +85,5 @@ export default class Geometric
 
       p.directionalLight(160, 160, 180, x, -y, 0.25)
       p.specularMaterial(255, 255, 255, 235)
-  }
-
-  static translateByMouse(p)
-  {
-    p.orbitControl()
   }
 }
