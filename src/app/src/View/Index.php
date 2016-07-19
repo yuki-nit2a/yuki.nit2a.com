@@ -45,8 +45,8 @@
                     <dt>Media</dt>
                     <dd><a href="https://github.com/yuki-nit2a" target="_blank">GitHub</a></dd>
 
-                    <dt>Board</dt>
-                    <dd>Hi Welcome</dd>
+                    <dt>?</dt>
+                    <dd>WELCOME2WWW.</dd>
                 </dl>
             </main>
         </div>
