@@ -7,8 +7,8 @@ export default class Geometric
 
   static generateGeometric(p)
   {
-    let xMax               = 17
-    let yMax               = 17
+    let xMax               = 10
+    let yMax               = 10
     let geometricSizeMulti = 1
     let radius             = p.width * 1
     let rotateX            = p.frameCount * -0.0005 + 1000
