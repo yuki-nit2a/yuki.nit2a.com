@@ -14,10 +14,13 @@ checkout:
     - git submodule update --init
 
 dependencies:
-  pre:
-    composer install
-    npm install
-    bower install
+  override:
+    - composer install
+    - npm install
+    - bower install
+
+  cache_directories:
+    - ~/.composer/cache/
 
   override:
     npm run gulp compile-prod
