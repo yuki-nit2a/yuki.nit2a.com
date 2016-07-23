@@ -1,0 +1,22 @@
+machine:
+  timezone: UTC
+
+  hosts:
+    yuki.nit2a.com: 127.0.0.1
+
+  environment:
+    DATABASE_URL: mysql://user:@127.0.0.1:3306/
+
+  dependencies:
+    override:
+      composer install
+      npm install
+      bower install
+    post:
+      npm run gulp compile-prod
+
+test:
+  pre:
+    - echo "CI Test Start"
+  pre:
+    - echo "CI Test End"

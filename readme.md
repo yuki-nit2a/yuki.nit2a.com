@@ -1,6 +1,8 @@
 # yuki.nit2a.com
 My profile website [yuki.nit2a.com](http://yuki.nit2a.com/) source codes.
 
+![master@CircleCI](https://circleci.com/gh/yuki-nit2a/yuki.nit2a.com.svg?&style=shield&circle-token=65936df3cb286937dd32a74f09fe3fd9d1d89a97)
+
 ## Screen Capture
 [![Screen Capture](https://raw.githubusercontent.com/yuki-nit2a/yuki.nit2a.com/master/readme/screencapture.gif)](http://yuki.nit2a.com/)
 
