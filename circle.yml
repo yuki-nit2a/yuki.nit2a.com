@@ -1,19 +1,26 @@
 machine:
   timezone: UTC
 
+  php:
+    version:
+      5.6.23
+
   hosts:
     yuki.nit2a.com: 127.0.0.1
 
-  environment:
-    DATABASE_URL: mysql://user:@127.0.0.1:3306/
+checkout:
+  post:
+    - git submodule sync
+    - git submodule update --init
 
-  dependencies:
-    override:
-      composer install
-      npm install
-      bower install
-    post:
-      npm run gulp compile-prod
+dependencies:
+  pre:
+    composer install
+    npm install
+    bower install
+
+  override:
+    npm run gulp compile-prod
 
 test:
   pre:
