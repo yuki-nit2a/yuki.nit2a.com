@@ -23,7 +23,7 @@ dependencies:
     - ~/.composer/cache/
 
   override:
-    npm run gulp compile-prod
+    - npm run gulp compile-prod
 
 test:
   pre:
